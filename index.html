@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+        //Add Function 
+        function add(a, b){
+            return a + b
+        };
+        console.log(add(2, 4));
+        
+        // Multiply Function 
+        function multiply(a, b) {
+            let product = 0
+            for(let i= 1; i <= b; i++){
+                product = add(a, product); 
+            }
+            return product
+        };  
+        console.log(multiply(6, 8));
+
+        // Power Function
+        function power(a, b) {
+            let product1 = 1;
+            for(let i= 1; i <= b; i++){
+                product1 = multiply (a, product1);
+            }
+            return product1;
+        };
+        console.log(power(2, 8));
+
+        //Factorial Function 
+        function factorial(a) {
+            let product2 = 1; 
+            for(let i= a; i >= 2; i--){
+                product2 = multiply (i, product2);
+            }
+            return product2
+        };
+        console.log(factorial(4));
+
+        //Fibonacci Function
+        function fibonacci(n){
+            first = 0;
+            second = 1;
+            next = 1;
+            for(let i= 2; i <=n; i++){
+                next = add(first, second);
+                second = first;
+                first = next;
+            }
+            return next
+        };
+        console.log(fibonacci(8));
+    </script>
+</body>
+
+</html>
